@@ -1,0 +1,49 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<head>
+    <link rel="stylesheet" href="~/css/data.css" />
+</head>
+<form id="form" method="post">
+    <label for="form">Вядзіце тэкст для аналізу</label>
+    <textarea class="form-control" id="textInput" rows="6"></textarea>
+    <br>
+    <button id="btn" type="submit" class="btn btn-primary">Аналізаваць</button>
+</form>
+<br />
+<div class="outputText" id="outputText"></div>
+<br />
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <input type="checkbox" class="form-check-input" id="isWordAnaliz" checked>
+            <label class="form-check-label" for="isWordAnaliz">Аналіз слоў</label>
+        </div>
+        <div class="col">
+            <input type="checkbox" class="form-check-input" id="isSymbolAnaliz" checked>
+            <label class="form-check-label" for="isSymbolAnaliz">Аналіз сімвалаў</label>
+        </div>
+        <div class="col">
+            <input type="checkbox" class="form-check-input" id="isWordInf" checked>
+            <label class="form-check-label" for="isWordInf">Даданая інфармацыя пра словы</label>
+        </div>
+    </div>
+</div>
+<hr />
+<p class="resultName" id="resultName">Рэзультат Аналізу</p>
+<br />
+<div class="container">
+    <div class="row">
+        <div id="outputWord" class="col"></div>
+        <div id="outputSymbol" class="col"></div>
+    </div>
+</div>
+<br />
+<p>Спасылкі з інфармацыей</p>
+<a href="https://unicode-table.com">Табліца сімвалаў Unicode</a><br/>
+<a href="https://ssrlab.by/1457">Інфармацыя пра API "Падлік частотнасці слоў"</a><br/>
+<a href="https://ssrlab.by/1457">Інфармацыя пра API "Падлік частотнасці сімвалаў"</a><br/>
+
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script src="~/js/data.js"></script>
+
